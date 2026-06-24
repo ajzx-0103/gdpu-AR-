@@ -1,0 +1,651 @@
+{
+  "scenes": [
+    {
+      "id": "door",
+      "name": "校门",
+      "description": "学校正门",
+      "panorama": "/media/panoramas/door.jpg",
+      "thumbnail": "/assets/textures/thumb_door.jpg",
+      "audio": "/media/audio/door_intro.mp3",
+      "hotspots": [
+        {
+          "id": "hs_door_to_doorin",
+          "type": "scene",
+          "targetScene": "door-in",
+          "position": { "x": 43.9, "y": 50 },
+          "title": "进入校门",
+          "icon": "left"
+        }
+      ],
+      "mapPosition": { "x": 1, "y": 18 }
+    },
+    {
+      "id": "door-in",
+      "name": "校门内侧",
+      "description": "进入校门后的视角",
+      "panorama": "/media/panoramas/door-in.jpg",
+      "thumbnail": "/assets/textures/thumb_doorin.jpg",
+      "audio": "/media/audio/doorin_intro.mp3",
+      "hotspots": [
+        {
+          "id": "hs_doorin_to_door",
+          "type": "scene",
+          "targetScene": "door",
+          "position": { "x": 95.6, "y": 61.9 },
+          "title": "返回校门外",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs_doorin_to_mainway",
+          "type": "scene",
+          "targetScene": "main-way",
+          "position": { "x": 20, "y": 50 },
+          "title": "前往主大道",
+          "icon": "nw"
+        },
+        {
+          "id": "hs_doorin_to_rightin",
+          "type": "scene",
+          "targetScene": "right-in",
+          "position": { "x": 50, "y": 50 },
+          "title": "校门右侧",
+          "icon": "up"
+        }
+      ],
+      "mapPosition": { "x": 10, "y": 15 }
+    },
+    {
+      "id": "right-in",
+      "name": "校门右侧",
+      "description": "校门右侧区域",
+      "panorama": "/media/panoramas/right-in.jpg",
+      "thumbnail": "/assets/textures/thumb_rightin.jpg",
+      "audio": "/media/audio/rightin_intro.mp3",
+      "hotspots": [
+        {
+          "id": "hs_rightin_to_door",
+          "type": "scene",
+          "targetScene": "door",
+          "position": { "x": 77, "y": 49 },
+          "title": "返回校门外",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs_rightin_to_mainway",
+          "type": "scene",
+          "targetScene": "main-way",
+          "position": { "x": 26, "y": 49 },
+          "title": "前往主大道",
+          "icon": "nw"
+        },
+        {
+          "id": "hs_rightin_to_gymnasium",
+          "type": "scene",
+          "targetScene": "gymnasium",
+          "position": { "x": 13, "y": 45 },
+          "title": "前往体育馆",
+          "icon": "arrow"
+        }
+      ],
+      "mapPosition": { "x": 10, "y": 23 }
+    },
+    {
+      "id": "main-way",
+      "name": "主大道",
+      "description": "校园主干道",
+      "panorama": "/media/panoramas/main-way.jpg",
+      "thumbnail": "/assets/textures/thumb_mainway.jpg",
+      "audio": "/media/audio/mainway_intro.mp3",
+      "hotspots": [
+        {
+          "id": "hs_mainway_to_doorin",
+          "type": "scene",
+          "targetScene": "door-in",
+          "position": { "x": 9, "y": 55 },
+          "title": "返回校门",
+          "icon": "sw"
+        },
+        {
+          "id": "hs_mainway_to_intersection",
+          "type": "scene",
+          "targetScene": "main-way-intersection",
+          "position": { "x": 38, "y": 50 },
+          "title": "前往十字路口",
+          "icon": "up"
+        },
+        {
+          "id": "hs_mainway_to_firstsecondcareen",
+          "type": "scene",
+          "targetScene": "first-second-careen",
+          "position": { "x": 50, "y": 48.6 },
+          "title": "前往一二食堂",
+          "icon": "arrow"
+        }
+      ],
+      "mapPosition": { "x": 40, "y": 19 }
+    },
+    {
+      "id": "main-way-intersection",
+      "name": "主大道十字路口",
+      "description": "主干道与各道路交汇处",
+      "panorama": "/media/panoramas/main-way-intersection.jpg",
+      "thumbnail": "/assets/textures/thumb_intersection.jpg",
+      "audio": "/media/audio/intersection_intro.mp3",
+      "hotspots": [
+        {
+          "id": "hs_intersection_to_mainway",
+          "type": "scene",
+          "targetScene": "main-way",
+          "position": { "x": 10, "y": 60 },
+          "title": "返回主大道",
+          "icon": "sw"
+        },
+        {
+          "id": "hs_intersection_to_thirdcanteen",
+          "type": "scene",
+          "targetScene": "third-canteen",
+          "position": { "x": 49, "y": 47 },
+          "title": "前往第三食堂",
+          "icon": "ne"
+        }
+      ]
+    },
+    {
+      "id": "third-canteen",
+      "name": "第三食堂",
+      "description": "学生第三食堂",
+      "panorama": "/media/panoramas/thrid-careen.jpg",
+      "thumbnail": "/assets/textures/thumb_canteen.jpg",
+      "audio": "/media/audio/canteen_intro.mp3",
+      "hotspots": [
+        {
+          "id": "hs_canteen_to_intersection",
+          "type": "scene",
+          "targetScene": "main-way-intersection",
+          "position": { "x": 35, "y": 57 },
+          "title": "前往十字路口",
+          "icon": "sw"
+        },
+        {
+          "id": "hs_canteen_to_activity",
+          "type": "scene",
+          "position": { "x": 17.9, "y": 48.8 },
+          "title": "学生活动中心",
+          "icon": "up"
+        },
+        {
+          "id": "hs_canteen_to_express",
+          "type": "scene",
+          "targetScene": "expressstation-and-infirmary",
+          "position": { "x": 46, "y": 47.4 },
+          "title": "前往医务室和快递驿站",
+          "icon": "ne"
+        }
+      ],
+      "mapPosition": { "x": 60, "y": 19 }
+    },
+    {
+      "id": "way-to-playground",
+      "name": "通往操场路",
+      "description": "通往操场的道路",
+      "panorama": "/media/panoramas/way-to-playground.jpg",
+      "thumbnail": "/assets/textures/thumb_waytoplayground.jpg",
+      "audio": "/media/audio/waytoplayground_intro.mp3",
+      "hotspots": [
+        {
+          "id": "hs_waytoplayground_to_playground",
+          "type": "scene",
+          "targetScene": "playground",
+          "position": { "x": 50, "y": 52 },
+          "title": "前往操场",
+          "icon": "ne"
+        },
+        {
+          "id": "hs_waytoplayground_to_rightin",
+          "type": "scene",
+          "targetScene": "right-in",
+          "position": { "x": 82, "y": 60 },
+          "title": "返回校园右侧",
+          "icon": "arrow"
+        }
+      ]
+    },
+    {
+      "id": "playground",
+      "name": "操场",
+      "description": "学校操场与运动区",
+      "panorama": "/media/panoramas/playground.jpg",
+      "thumbnail": "/assets/textures/thumb_playground.jpg",
+      "audio": "/media/audio/playground_intro.mp3",
+      "hotspots": [
+        {
+          "id": "hs_playground_to_waytoplayground",
+          "type": "scene",
+          "targetScene": "way-to-playground",
+          "position": { "x": 80, "y": 58 },
+          "title": "返回道路",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs_playground_to_basketball",
+          "type": "scene",
+          "targetScene": "basketball-ground",
+          "position": { "x": 25, "y": 47 },
+          "title": "前往篮球场",
+          "icon": "ne"
+        }
+      ],
+      "mapPosition": { "x": 30, "y": 32 }
+    },
+    {
+      "id": "gymnasium",
+      "name": "体育馆",
+      "description": "学校体育馆",
+      "panorama": "/media/panoramas/gymnasium.jpg",
+      "thumbnail": "/assets/textures/thumb_gymnasium.jpg",
+      "audio": "/media/audio/gymnasium_intro.mp3",
+      "hotspots": [
+        {
+          "id": "hs_gymnasium_to_rightin",
+          "type": "scene",
+          "targetScene": "right-in",
+          "position": { "x": 87, "y": 58 },
+          "title": "返回校门右侧",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs_gymnasium_to_playground",
+          "type": "scene",
+          "targetScene": "way-to-playground",
+          "position": { "x": 30, "y": 47 },
+          "title": "前往操场",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs_gymnasium_to_mainway",
+          "type": "scene",
+          "targetScene": "main-way",
+          "position": { "x": 7.8, "y": 56.5 },
+          "title": "返回主道",
+          "icon": "left"
+        }
+      ],
+      "mapPosition": { "x": 30, "y": 22 }
+    },
+    {
+      "id": "south-door",
+      "name": "南门",
+      "description": "学校南门",
+      "panorama": "/media/panoramas/south-door.jpg",
+      "hotspots": [
+        {
+          "id": "hs_southdoor_to_southdoorin",
+          "type": "scene",
+          "targetScene": "south-door-in",
+          "position": { "x": 86, "y": 74 },
+          "title": "进入校门",
+          "icon": "up"
+        }
+      ],
+      "mapPosition": { "x": 33, "y": 98 }
+    },
+    {
+      "id": "south-door-in",
+      "name": "南门内侧",
+      "description": "进入南门后的视角",
+      "panorama": "/media/panoramas/south-door-in.jpg",
+      "hotspots": [
+        {
+          "id": "hs_southdoorin_to_southdoor",
+          "type": "scene",
+          "targetScene": "south-door",
+          "position": { "x": 46.8, "y": 59 },
+          "title": "前往南门",
+          "icon": "down"
+        },
+        {
+          "id": "hs_southdoorin_to_teaching",
+          "type": "scene",
+          "targetScene": "teaching-building",
+          "position": { "x": 42.5, "y": 47.4 },
+          "title": "前往教学楼",
+          "icon": "nw"
+        },
+        {
+          "id": "hs_southdoorin_to_library",
+          "type": "scene",
+          "targetScene": "way-to-library-lab-building",
+          "position": { "x": 52.6, "y": 47.1 },
+          "title": "前往图书馆",
+          "icon": "up"
+        }
+      ]
+    },
+    {
+      "id": "teaching-building",
+      "name": "教学楼",
+      "description": "学校教学楼",
+      "panorama": "/media/panoramas/teaching-building.jpg",
+      "hotspots": [
+        {
+          "id": "hs_teaching_to_libraryroad",
+          "type": "scene",
+          "targetScene": "way-to-library-lab-building",
+          "position": { "x": 2.8, "y": 50.5 },
+          "title": "前往图书馆实验楼",
+          "icon": "up"
+        },
+        {
+          "id": "hs_teaching_to_southdoorin",
+          "type": "scene",
+          "targetScene": "car-way",
+          "position": { "x": 60, "y": 47.8 },
+          "title": "前往南门",
+          "icon": "up"
+        },
+        {
+          "id": "hs_teaching_to_firstsecondcareen",
+          "type": "scene",
+          "targetScene": "first-second-careen",
+          "position": { "x": 92.5, "y": 47.3 },
+          "title": "前往一二食堂",
+          "icon": "arrow"
+        }
+      ],
+      "mapPosition": { "x": 34, "y": 70 }
+    },
+    {
+      "id": "way-to-library-lab-building",
+      "name": "通往图书馆实验楼路",
+      "description": "通往图书馆与实验楼的道路",
+      "panorama": "/media/panoramas/way-to-library-laboratory-building.jpg",
+      "hotspots": [
+        {
+          "id": "hs_libraryroad_to_lake",
+          "type": "scene",
+          "targetScene": "artificial-lake",
+          "position": { "x": 7.5, "y": 47 },
+          "title": "前往人工湖",
+          "icon": "up"
+        },
+        {
+          "id": "hs_libraryroad_to_teaching",
+          "type": "scene",
+          "targetScene": "teaching-building",
+          "position": { "x": 91, "y": 57.5 },
+          "title": "前往教学楼",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs_libraryroad_to_library",
+          "type": "scene",
+          "targetScene": "library",
+          "position": { "x": 51, "y": 47 },
+          "title": "前往图书馆",
+          "icon": "up"
+        },
+        {
+          "id": "hs_libraryroad_to_lab",
+          "type": "scene",
+          "position": { "x": 94, "y": 49 },
+          "title": "前往实验楼",
+          "icon": "ne"
+        }
+      ],
+      "mapPosition": { "x": 50, "y": 66 }
+    },
+    {
+      "id": "first-second-careen",
+      "name": "一二食堂",
+      "description": "第一、第二食堂",
+      "panorama": "/media/panoramas/first-second-careen.jpg",
+      "hotspots": [
+        {
+          "id": "hs_firstsecondcareen_to_mainway",
+          "type": "scene",
+          "targetScene": "main-way",
+          "position": { "x": 26, "y": 54.6 },
+          "title": "前往主大道",
+          "icon": "nw"
+        },
+        {
+          "id": "hs_firstsecondcareen_to_teaching",
+          "type": "scene",
+          "targetScene": "teaching-building",
+          "position": { "x": 90, "y": 50 },
+          "title": "前往教学楼",
+          "icon": "ne"
+        },
+        {
+          "id": "hs_firstsecondcareen_to_lake",
+          "type": "scene",
+          "targetScene": "artificial-lake",
+          "position": { "x": 63, "y": 48.4 },
+          "title": "前往人工湖",
+          "icon": "nw"
+        },
+        {
+          "id": "hs_firstsecondcareen_to_basketball",
+          "type": "scene",
+          "targetScene": "basketball-ground",
+          "position": { "x": 51.7, "y": 61 },
+          "title": "前往操场",
+          "icon": "down"
+        }
+      ],
+      "mapPosition": { "x": 30, "y": 42 }
+    },
+    {
+      "id": "basketball-ground",
+      "name": "篮球场",
+      "description": "学校篮球场",
+      "panorama": "/media/panoramas/basketball-ground.jpg",
+      "hotspots": [
+        {
+          "id": "hs_basketball_to_firstsecondcareen",
+          "type": "scene",
+          "targetScene": "first-second-careen",
+          "position": { "x": 15, "y": 48 },
+          "title": "前往一二食堂",
+          "icon": "nw"
+        },
+        {
+          "id": "hs_basketball_to_playground",
+          "type": "scene",
+          "targetScene": "playground",
+          "position": { "x": 78, "y": 50 },
+          "title": "返回操场",
+          "icon": "arrow"
+        },
+        {
+          "id": "hs_basketball_to_teaching",
+          "type": "scene",
+          "targetScene": "teaching-building",
+          "position": { "x": 56, "y": 48 },
+          "title": "前往教学楼",
+          "icon": "up"
+        }
+      ],
+      "mapPosition": { "x": 24, "y": 45 }
+    },
+    {
+      "id": "artificial-lake",
+      "name": "人工湖",
+      "description": "校园人工湖",
+      "panorama": "/media/panoramas/artificial-lake.jpg",
+      "hotspots": [
+        {
+          "id": "hs_lake_to_library",
+          "type": "scene",
+          "targetScene": "library",
+          "position": { "x": 12.5, "y": 51.8 },
+          "title": "前往图书馆",
+          "icon": "nw"
+        },
+        {
+          "id": "hs_lake_to_thirdcanteen",
+          "type": "scene",
+          "targetScene": "expressstation-and-infirmary",
+          "position": { "x": 6.5, "y": 55.5 },
+          "title": "前往快递站与医务室",
+          "icon": "left"
+        },
+        {
+          "id": "hs_lake_to_lab",
+          "type": "scene",
+          "targetScene": "way-to-library-lab-building",
+          "position": { "x": 68, "y": 47 },
+          "title": "前往实验楼教学楼",
+          "icon": "up"
+        },
+        {
+          "id": "hs_lake_to_firstsecondcareen",
+          "type": "scene",
+          "targetScene": "first-second-careen",
+          "position": { "x": 93.8, "y": 50.4 },
+          "title": "前往一二食堂",
+          "icon": "arrow"
+        }
+      ],
+      "mapPosition": { "x": 60, "y": 50 }
+    },
+    {
+      "id": "library",
+      "name": "图书馆",
+      "description": "学校图书馆",
+      "panorama": "/media/panoramas/library.jpg",
+      "hotspots": [
+        {
+          "id": "hs_library_to_express",
+          "type": "scene",
+          "targetScene": "expressstation-and-infirmary",
+          "position": { "x": 9.7, "y": 51.7 },
+          "title": "前往快递站与医务室",
+          "icon": "nw"
+        },
+        {
+          "id": "hs_library_to_carway",
+          "type": "scene",
+          "targetScene": "car-way",
+          "position": { "x": 64, "y": 47.3 },
+          "title": "前往南门",
+          "icon": "ne"
+        },
+        {
+          "id": "hs_library_to_nearlib",
+          "type": "scene",
+          "targetScene": "near-library",
+          "position": { "x": 85, "y": 52 },
+          "title": "前往图书馆附近",
+          "icon": "arrow"
+        }
+      ],
+      "mapPosition": { "x": 78, "y": 58 }
+    },
+    {
+      "id": "near-library",
+      "name": "图书馆附近",
+      "description": "图书馆周边区域",
+      "panorama": "/media/panoramas/near-library.jpg",
+      "hotspots": [
+        {
+          "id": "hs_nearlib_to_labroad",
+          "type": "scene",
+          "targetScene": "way-to-library-lab-building",
+          "position": { "x": 14, "y": 50 },
+          "title": "前往实验楼",
+          "icon": "up"
+        },
+        {
+          "id": "hs_nearlib_to_library",
+          "type": "scene",
+          "targetScene": "library",
+          "position": { "x": 67, "y": 51 },
+          "title": "前往图书馆",
+          "icon": "ne"
+        }
+      ],
+      "mapPosition": { "x": 66, "y": 75 }
+    },
+    {
+      "id": "expressstation-and-infirmary",
+      "name": "快递站与医务室",
+      "description": "学校快递站与医务室",
+      "panorama": "/media/panoramas/expressstation-and-infirmary.jpg",
+      "hotspots": [
+        {
+          "id": "hs_express_to_library",
+          "type": "scene",
+          "targetScene": "library",
+          "position": { "x": 90, "y": 48 },
+          "title": "前往图书馆",
+          "icon": "ne"
+        },
+        {
+          "id": "hs_express_to_canteen",
+          "type": "scene",
+          "targetScene": "third-canteen",
+          "position": { "x": 12, "y": 54 },
+          "title": "前往第三食堂",
+          "icon": "left"
+        },
+        {
+          "id": "hs_express_infirmary",
+          "type": "scene",
+          "position": { "x": 41, "y": 44 },
+          "title": "医务室",
+          "icon": "nw"
+        },
+        {
+          "id": "hs_express_station",
+          "type": "scene",
+          "position": { "x": 50, "y": 45 },
+          "title": "快递驿站",
+          "icon": "ne"
+        }
+      ],
+      "mapPosition": { "x": 76, "y": 25 }
+    },
+    {
+      "id": "car-way",
+      "name": "车行道",
+      "description": "校园车行道",
+      "panorama": "/media/panoramas/car-way.jpg",
+      "hotspots": [
+        {
+          "id": "hs_carway_to_teaching",
+          "type": "scene",
+          "targetScene": "teaching-building",
+          "position": { "x": 6.6, "y": 50 },
+          "title": "前往教学楼",
+          "icon": "up"
+        },
+        {
+          "id": "hs_carway_to_southdoorin",
+          "type": "scene",
+          "targetScene": "south-door-in",
+          "position": { "x": 7.4, "y": 61 },
+          "title": "前往南门",
+          "icon": "left"
+        },
+        {
+          "id": "hs_carway_to_library",
+          "type": "scene",
+          "targetScene": "library",
+          "position": { "x": 69, "y": 50 },
+          "title": "前往图书馆",
+          "icon": "ne"
+        },
+        {
+          "id": "hs_carway_to_express",
+          "type": "scene",
+          "targetScene": "expressstation-and-infirmary",
+          "position": { "x": 88, "y": 52 },
+          "title": "前往快递站与医务室",
+          "icon": "ne"
+        }
+      ],
+      "mapPosition": { "x": 50, "y": 89 }
+    }
+  ]
+}
