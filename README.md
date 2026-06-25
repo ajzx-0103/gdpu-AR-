@@ -8,6 +8,12 @@
 基于 Web 的交互式校园导览应用，支持全景浏览、场景切换、沙盘导览和 WebXR AR 沉浸模式。
 
 <div align="center">
+  <a href="https://gdpu-ar.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/在线体验-Vercel部署-000?style=for-the-badge&logo=vercel" alt="Vercel 部署" />
+  </a>
+</div>
+
+<div align="center">
   <a href="#-功能特性">功能特性</a> •
   <a href="#-快速开始">快速开始</a> •
   <a href="#-项目结构">项目结构</a> •
@@ -62,6 +68,10 @@ npm start
 ```
 
 服务监听 `0.0.0.0:3000`，支持局域网访问。
+
+### 在线体验
+
+[https://gdpu-ar.vercel.app](https://gdpu-ar.vercel.app)
 
 ## API 接口
 
