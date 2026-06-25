@@ -6,6 +6,8 @@ export class SceneManager {
     this.scenesData = [];
     this.currentSceneId = null;
     this.hotspotElements = [];
+    this.sceneCache = {};
+    this.preloadedImages = {};
   }
 
   onHotspotClicked(callback) {
@@ -24,12 +26,38 @@ export class SceneManager {
   }
 
   async loadSceneDetail(sceneId) {
+    if (this.sceneCache[sceneId]) {
+      return this.sceneCache[sceneId];
+    }
     try {
       const res = await fetch(`/api/scenes/${sceneId}`);
       const data = await res.json();
+      this.sceneCache[sceneId] = data.scene;
       return data.scene;
     } catch {
       return null;
+    }
+  }
+
+  preloadImage(url) {
+    if (this.preloadedImages[url]) return;
+    this.preloadedImages[url] = true;
+    const img = new Image();
+    img.src = url;
+  }
+
+  async preloadAdjacentScenes(scene) {
+    if (!scene.hotspots) return;
+    const targetIds = new Set();
+    for (const hs of scene.hotspots) {
+      if (hs.type === 'scene' && hs.targetScene) {
+        targetIds.add(hs.targetScene);
+      }
+    }
+    for (const id of targetIds) {
+      this.loadSceneDetail(id).then(s => {
+        if (s) this.preloadImage(s.panorama);
+      });
     }
   }
 
@@ -60,6 +88,8 @@ export class SceneManager {
     if (this.onSceneChange) {
       this.onSceneChange(scene);
     }
+
+    this.preloadAdjacentScenes(scene);
   }
 
   clearHotspots() {
