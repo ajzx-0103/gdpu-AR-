@@ -8,14 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const rootDir = process.cwd();
-
-app.use('/assets', express.static(path.join(rootDir, 'frontend', 'assets')));
-app.use('/media', express.static(path.join(rootDir, 'media')));
-app.use(express.static(path.join(rootDir, 'frontend')));
-
 const scenesData = JSON.parse(
-  fs.readFileSync(path.join(rootDir, 'data', 'scenes.json'), 'utf-8')
+  fs.readFileSync(path.join(process.cwd(), 'data', 'scenes.json'), 'utf-8')
 );
 
 app.get('/api/scenes', (req, res) => {
@@ -49,10 +43,6 @@ app.post('/api/visit/record', (req, res) => {
   const { sceneId, duration } = req.body;
   console.log(`[访问记录] 场景: ${sceneId}, 停留: ${duration}秒`);
   res.json({ success: true });
-});
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(rootDir, 'frontend', 'index.html'));
 });
 
 module.exports = app;
