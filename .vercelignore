@@ -1,0 +1,10 @@
+.git
+.gitignore
+.gitattributes
+README.md
+screenshots
+backend/node_modules
+backend/package-lock.json
+*.md
+.vscode
+
