@@ -1,8 +1,8 @@
 # 校园 AR 全景漫游系统
 
 <div align="center">
-  <img src="media/panoramas/door.jpg" alt="校门全景" width="100%" />
-  <p><em>校门 · 360° 全景场景</em></p>
+  <img src="screenshots/panorama-with-hotspots.png" alt="全景热点界面" width="100%" />
+  <p><em>全景漫游 · 带热点标记的交互界面</em></p>
 </div>
 
 基于 Web 的交互式校园导览应用，支持全景浏览、场景切换、沙盘导览和 WebXR AR 沉浸模式。
@@ -85,14 +85,14 @@ npm start
 <div align="center">
   <table>
     <tr>
-      <td align="center"><img src="media/panoramas/door.jpg" width="300" /><br/><b>校门</b></td>
-      <td align="center"><img src="media/panoramas/main-way.jpg" width="300" /><br/><b>主大道</b></td>
-      <td align="center"><img src="media/panoramas/main-way-intersection.jpg" width="300" /><br/><b>十字路口</b></td>
+      <td align="center"><img src="media/panoramas/door.jpg" width="280" /><br/><b>校门</b></td>
+      <td align="center"><img src="media/panoramas/main-way.jpg" width="280" /><br/><b>主大道</b></td>
+      <td align="center"><img src="media/panoramas/main-way-intersection.jpg" width="280" /><br/><b>十字路口</b></td>
     </tr>
     <tr>
-      <td align="center"><img src="media/panoramas/library.jpg" width="300" /><br/><b>图书馆</b></td>
-      <td align="center"><img src="media/panoramas/playground.jpg" width="300" /><br/><b>操场</b></td>
-      <td align="center"><img src="media/panoramas/artificial-lake.jpg" width="300" /><br/><b>人工湖</b></td>
+      <td align="center"><img src="media/panoramas/library.jpg" width="280" /><br/><b>图书馆</b></td>
+      <td align="center"><img src="media/panoramas/playground.jpg" width="280" /><br/><b>操场</b></td>
+      <td align="center"><img src="media/panoramas/artificial-lake.jpg" width="280" /><br/><b>人工湖</b></td>
     </tr>
   </table>
 </div>
@@ -101,4 +101,4 @@ npm start
 
 ## 沙盘地图
 
-<img src="frontend/assets/textures/campus-map.jpg" alt="校园沙盘地图" width="100%" />
+<img src="screenshots/sandbox-map.png" alt="沙盘导览界面" width="100%" />
