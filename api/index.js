@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const rootDir = path.join(__dirname, '..');
+const rootDir = process.cwd();
 
 app.use('/assets', express.static(path.join(rootDir, 'frontend', 'assets')));
 app.use('/media', express.static(path.join(rootDir, 'media')));
